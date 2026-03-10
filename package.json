@@ -1,0 +1,26 @@
+{
+  "name": "@safetnsr/tasks",
+  "version": "0.1.0",
+  "description": "open source copilot tasks — define coding tasks as markdown, run with any agent, get a report",
+  "bin": { "tasks": "dist/cli.js" },
+  "main": "./dist/cli.js",
+  "files": ["dist/", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc -p tsconfig.test.json && node --test build/tests/*.test.js",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": ["ai", "agents", "cli", "tasks", "copilot", "automation", "claude-code"],
+  "author": "safetnsr",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "glob": "^10.0.0",
+    "yaml": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
